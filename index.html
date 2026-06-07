@@ -197,7 +197,277 @@ nav{
   clip-path:polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px);
 }
 .nav-cta:hover{background:var(--accent);color:var(--bg);}
-/* hamburger styles définis plus bas */
+
+/* ============================================ */
+/* 🍔 NOUVEAU HAMBURGER PROFESSIONNEL */
+/* ============================================ */
+
+/* Bouton hamburger - design épuré et premium */
+.hamburger{
+  display:none;
+  position:relative;
+  width:44px;
+  height:44px;
+  cursor:pointer;
+  background:transparent;
+  border:1px solid var(--border);
+  padding:0;
+  flex-shrink:0;
+  transition:all .3s cubic-bezier(.4,0,.2,1);
+  overflow:hidden;
+}
+.hamburger:hover{
+  border-color:var(--accent);
+  background:rgba(0,85,255,.02);
+}
+body.dark .hamburger:hover{
+  background:rgba(0,255,200,.02);
+}
+
+/* Les 3 lignes du hamburger */
+.hamburger-line{
+  position:absolute;
+  left:10px;
+  width:22px;
+  height:2px;
+  background:var(--text);
+  transition:all .4s cubic-bezier(.4,0,.2,1);
+  transform-origin:center;
+}
+.hamburger-line:nth-child(1){top:13px;}
+.hamburger-line:nth-child(2){top:21px;}
+.hamburger-line:nth-child(3){top:29px;}
+
+/* État ouvert - transformation en croix élégante */
+.hamburger.is-open .hamburger-line:nth-child(1){
+  top:21px;
+  transform:rotate(45deg);
+  background:var(--accent);
+}
+.hamburger.is-open .hamburger-line:nth-child(2){
+  opacity:0;
+  transform:scaleX(0);
+}
+.hamburger.is-open .hamburger-line:nth-child(3){
+  top:21px;
+  transform:rotate(-45deg);
+  background:var(--accent);
+}
+
+/* Effet de halo au survol quand ouvert */
+.hamburger.is-open:hover{
+  border-color:var(--accent);
+  box-shadow:0 0 20px rgba(0,85,255,.08);
+}
+body.dark .hamburger.is-open:hover{
+  box-shadow:0 0 20px rgba(0,255,200,.08);
+}
+
+/* ============================================ */
+/* 📱 MENU MOBILE - DESIGN PREMIUM */
+/* ============================================ */
+
+/* Overlay / backdrop */
+.menu-backdrop{
+  position:fixed;
+  inset:0;
+  z-index:999;
+  background:rgba(4,6,8,.75);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .45s cubic-bezier(.4,0,.2,1),visibility 0s linear .45s;
+}
+.menu-backdrop.open{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+  transition:opacity .45s cubic-bezier(.4,0,.2,1),visibility 0s linear 0s;
+}
+
+/* Panneau du menu mobile */
+.mobile-nav{
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  width:min(380px,90vw);
+  z-index:1000;
+  background:var(--card);
+  display:flex;
+  flex-direction:column;
+  transform:translateX(105%);
+  visibility:hidden;
+  transition:transform .5s cubic-bezier(.4,0,.2,1),visibility 0s linear .5s;
+  box-shadow:-8px 0 40px rgba(0,0,0,.12);
+  overflow:hidden;
+}
+body.dark .mobile-nav{
+  box-shadow:-8px 0 40px rgba(0,0,0,.5);
+}
+.mobile-nav.open{
+  transform:translateX(0);
+  visibility:visible;
+  transition:transform .5s cubic-bezier(.4,0,.2,1),visibility 0s linear 0s;
+}
+
+/* Header du panneau */
+.mobile-nav-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:28px 32px 24px;
+  border-bottom:1px solid var(--border);
+  flex-shrink:0;
+}
+.mobile-nav-brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:.68rem;
+  font-weight:700;
+  color:var(--accent);
+  letter-spacing:2px;
+}
+.mobile-nav-brand::before{
+  content:'';
+  width:7px;
+  height:7px;
+  background:var(--accent);
+  border-radius:50%;
+  animation:blink 2s infinite;
+  flex-shrink:0;
+}
+
+/* Bouton fermer du menu mobile */
+.mobile-nav-close{
+  width:40px;
+  height:40px;
+  border:1px solid var(--border);
+  background:transparent;
+  color:var(--text);
+  font-size:.9rem;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:all .25s ease;
+  position:relative;
+}
+.mobile-nav-close:hover{
+  border-color:var(--accent);
+  color:var(--accent);
+  background:rgba(0,85,255,.04);
+}
+body.dark .mobile-nav-close:hover{
+  background:rgba(0,255,200,.04);
+}
+
+/* Liste des liens */
+.mobile-nav-links{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  padding:12px 0;
+  overflow-y:auto;
+}
+.mobile-nav-links a{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.8rem;
+  font-weight:500;
+  color:var(--muted2);
+  text-decoration:none;
+  letter-spacing:1px;
+  padding:18px 32px;
+  transition:all .3s ease;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-left:3px solid transparent;
+}
+.mobile-nav-links a:hover{
+  color:var(--text);
+  background:rgba(0,85,255,.03);
+  border-left-color:var(--accent);
+  padding-left:40px;
+}
+body.dark .mobile-nav-links a:hover{
+  background:rgba(0,255,200,.03);
+}
+
+/* Numéro de lien */
+.mob-link-num{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.58rem;
+  color:var(--muted);
+  letter-spacing:2px;
+  opacity:.6;
+  margin-right:12px;
+}
+
+/* Flèche discrète au hover */
+.mob-link-arrow{
+  opacity:0;
+  transform:translateX(-6px);
+  transition:all .3s ease;
+  color:var(--accent);
+  font-size:.75rem;
+}
+.mobile-nav-links a:hover .mob-link-arrow{
+  opacity:1;
+  transform:translateX(0);
+}
+
+/* Footer du panneau */
+.mobile-nav-footer{
+  padding:24px 32px 32px;
+  border-top:1px solid var(--border);
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  background:var(--dark);
+  flex-shrink:0;
+}
+.mobile-nav-footer-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.mobile-lang{
+  display:flex;
+  border:1px solid var(--border);
+  overflow:hidden;
+}
+
+/* Bouton CTA mobile */
+.mobile-cta{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:16px 20px;
+  background:var(--accent);
+  color:var(--bg);
+  font-family:'JetBrains Mono',monospace;
+  font-size:.78rem;
+  font-weight:700;
+  letter-spacing:1px;
+  text-decoration:none;
+  transition:all .3s ease;
+  clip-path:polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px);
+}
+.mobile-cta:hover{
+  background:var(--accent2);
+  transform:translateY(-1px);
+  box-shadow:0 8px 24px rgba(0,85,255,.2);
+}
+body.dark .mobile-cta:hover{
+  box-shadow:0 8px 24px rgba(0,255,200,.15);
+}
 
 /* HERO */
 .hero{min-height:100vh;display:flex;align-items:center;padding:100px 40px 60px;position:relative;z-index:1;overflow:hidden;}
@@ -420,179 +690,11 @@ footer span{color:var(--accent);}
 .wa-btn{position:fixed;bottom:32px;right:32px;z-index:800;width:56px;height:56px;background:#25D366;display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 8px 30px rgba(37,211,102,.3);transition:transform .25s ease;text-decoration:none;clip-path:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px);}
 .wa-btn:hover{transform:scale(1.1);}
 
-/* MOBILE NAV — FULL SCREEN OVERLAY HAUT NIVEAU */
-.menu-backdrop{
-  position:fixed;inset:0;z-index:9000;
-  background:rgba(0,0,0,.6);
-  opacity:0;
-  visibility:hidden;
-  transition:opacity .4s ease, visibility 0s linear .4s;
-  backdrop-filter:blur(4px);
-  -webkit-backdrop-filter:blur(4px);
-}
-.menu-backdrop.open{
-  opacity:1;
-  visibility:visible;
-  pointer-events:auto;
-  transition:opacity .4s ease, visibility 0s linear 0s;
-}
-
-.mobile-nav{
-  position:fixed;top:0;right:0;bottom:0;
-  width:min(340px,88vw);
-  z-index:9100;
-  background:var(--bg);
-  border-left:1px solid var(--border);
-  display:flex;
-  flex-direction:column;
-  transform:translateX(100%);
-  visibility:hidden;
-  transition:transform .45s cubic-bezier(.16,1,.3,1), visibility 0s linear .45s;
-  overflow:hidden;
-  box-shadow:-20px 0 60px rgba(0,0,0,.3);
-}
-.mobile-nav::before{
-  content:'';
-  position:absolute;inset:0;
-  background:linear-gradient(160deg,rgba(0,255,200,.03) 0%,transparent 50%);
-  pointer-events:none;
-  z-index:0;
-}
-body.dark .mobile-nav::before{
-  background:linear-gradient(160deg,rgba(0,85,255,.04) 0%,transparent 50%);
-}
-.mobile-nav.open{
-  transform:translateX(0);
-  visibility:visible;
-  transition:transform .45s cubic-bezier(.16,1,.3,1), visibility 0s linear 0s;
-}
-
-/* Header du tiroir */
-.mobile-nav-header{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:24px 28px;
-  border-bottom:1px solid var(--border);
-  width:100%;flex-shrink:0;
-  position:relative;z-index:1;
-}
-.mobile-nav-logo{
-  display:flex;align-items:center;gap:10px;
-  font-family:'JetBrains Mono',monospace;
-  font-size:.7rem;font-weight:700;color:var(--accent);
-  letter-spacing:2px;
-}
-.mobile-nav-logo::before{
-  content:'';width:8px;height:8px;
-  background:var(--accent);border-radius:50%;
-  animation:blink 2s infinite;flex-shrink:0;
-}
-.mobile-nav-close{
-  width:36px;height:36px;
-  border:1px solid var(--border);
-  background:transparent;color:var(--text);
-  font-size:.9rem;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;
-  transition:all .2s ease;
-  clip-path:polygon(6px 0,100% 0,100% calc(100% - 6px),calc(100% - 6px) 100%,0 100%,0 6px);
-}
-.mobile-nav-close:hover{background:var(--accent);color:var(--bg);border-color:var(--accent);}
-
-/* LIENS nav mobile */
-.mobile-nav-links{
-  flex:1;display:flex;flex-direction:column;
-  padding:12px 0;
-  position:relative;z-index:1;
-  overflow-y:auto;
-}
-.mobile-nav-links a{
-  font-family:'JetBrains Mono',monospace;
-  font-size:.82rem;font-weight:600;
-  color:var(--muted2);
-  text-decoration:none;letter-spacing:1px;
-  transition:all .25s ease;
-  padding:17px 28px;
-  border-bottom:1px solid var(--border);
-  display:flex;align-items:center;justify-content:space-between;
-  position:relative;overflow:hidden;
-}
-.mobile-nav-links a::before{
-  content:'';
-  position:absolute;left:0;top:0;bottom:0;width:3px;
-  background:var(--accent);
-  transform:scaleY(0);
-  transition:transform .25s ease;
-}
-.mobile-nav-links a::after{
-  content:'→';
-  color:var(--accent);
-  font-size:.8rem;
-  opacity:0;
-  transform:translateX(-8px);
-  transition:all .25s ease;
-}
-.mobile-nav-links a:hover{
-  color:var(--text);
-  background:rgba(0,255,200,.03);
-  padding-left:36px;
-}
-body.dark .mobile-nav-links a:hover{background:rgba(0,85,255,.03);}
-.mobile-nav-links a:hover::before{transform:scaleY(1);}
-.mobile-nav-links a:hover::after{opacity:1;transform:translateX(0);}
-
-/* Numéro de lien */
-.mob-link-num{
-  font-family:'JetBrains Mono',monospace;
-  font-size:.58rem;color:var(--muted);
-  letter-spacing:2px;margin-right:auto;margin-left:0;
-  padding-right:14px;
-}
-
-/* Footer du tiroir */
-.mobile-nav-footer{
-  padding:20px 28px 28px;
-  border-top:1px solid var(--border);
-  display:flex;flex-direction:column;gap:12px;
-  background:var(--dark);
-  position:relative;z-index:1;
-  flex-shrink:0;
-}
-.mobile-nav-footer-row{
-  display:flex;align-items:center;justify-content:space-between;gap:10px;
-}
-.mobile-lang{display:flex;border:1px solid var(--border);overflow:hidden;}
-.mobile-cta{
-  display:flex;align-items:center;justify-content:center;gap:10px;
-  padding:15px 20px;
-  background:var(--accent);color:var(--bg);
-  font-family:'JetBrains Mono',monospace;font-size:.78rem;font-weight:700;
-  letter-spacing:1px;text-decoration:none;
-  clip-path:polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px);
-  transition:all .25s ease;
-  width:100%;
-}
-.mobile-cta:hover{background:var(--accent2);}
-
-/* Hamburger animé */
-.hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;background:none;border:1px solid var(--border);width:38px;height:38px;padding:0;transition:border-color .2s ease;flex-shrink:0;}
-.hamburger:hover{border-color:var(--accent);}
-.hamburger span{
-  width:18px;height:2px;
-  background:var(--text);
-  transition:transform .35s cubic-bezier(.16,1,.3,1), opacity .2s ease, width .3s ease;
-  transform-origin:center;
-  display:block;
-}
-.hamburger.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-.hamburger.is-open span:nth-child(2){opacity:0;width:0;}
-.hamburger.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-
-
 @media(max-width:1000px){.hero-code{display:none;}h1{font-size:clamp(2.8rem,8vw,4.5rem);}}
 @media(max-width:768px){
   nav{padding:0 20px;}
   .nav-links,.nav-cta{display:none;}
   .hamburger{display:flex;}
-  /* mobile-nav toujours display:flex, caché par transform+visibility */
   .hero{padding:88px 20px 48px;}
   .wrap{padding:0 20px;}
   .services-grid,.ba-grid,.reviews-grid,.contact-inner{grid-template-columns:1fr;}
@@ -710,36 +812,50 @@ h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.92;font-weight:800;letter-spaci
     <button class="theme-btn" id="themeBtn" title="Changer de thème">🌙</button>
     <a href="https://wa.me/22607190217" class="nav-cta" data-i18n="nav.cta">→ Me contacter</a>
   </div>
-  <button class="hamburger" id="hambBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+  <!-- 🍔 NOUVEAU HAMBURGER -->
+  <button class="hamburger" id="hambBtn" aria-label="Menu">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
 </nav>
 
+<!-- Overlay arrière-plan -->
 <div class="menu-backdrop" id="menuBackdrop"></div>
+
+<!-- 📱 MENU MOBILE PREMIUM -->
 <nav class="mobile-nav" id="mobileNav" aria-hidden="true">
   <!-- Header -->
   <div class="mobile-nav-header">
-    <div class="mobile-nav-logo">BALIMA·DEV</div>
+    <div class="mobile-nav-brand">BALIMA·DEV</div>
     <button class="mobile-nav-close" id="mobileNavClose" aria-label="Fermer le menu">✕</button>
   </div>
 
   <!-- Liens -->
   <div class="mobile-nav-links">
-    <a href="#services" class="mob-link" data-idx="01">
-      <span><span class="mob-link-num">01 /</span> <span data-i18n="nav.services">Services</span></span>
+    <a href="#services" class="mob-link">
+      <span><span class="mob-link-num">01</span> <span data-i18n="nav.services">Services</span></span>
+      <span class="mob-link-arrow">→</span>
     </a>
-    <a href="#realisations" class="mob-link" data-idx="02">
-      <span><span class="mob-link-num">02 /</span> <span data-i18n="nav.portfolio">Réalisations</span></span>
+    <a href="#realisations" class="mob-link">
+      <span><span class="mob-link-num">02</span> <span data-i18n="nav.portfolio">Réalisations</span></span>
+      <span class="mob-link-arrow">→</span>
     </a>
-    <a href="#blog" class="mob-link" data-idx="03">
-      <span><span class="mob-link-num">03 /</span> <span data-i18n="nav.blog">Blog</span></span>
+    <a href="#blog" class="mob-link">
+      <span><span class="mob-link-num">03</span> <span data-i18n="nav.blog">Blog</span></span>
+      <span class="mob-link-arrow">→</span>
     </a>
-    <a href="#processus" class="mob-link" data-idx="04">
-      <span><span class="mob-link-num">04 /</span> <span data-i18n="nav.process">Processus</span></span>
+    <a href="#processus" class="mob-link">
+      <span><span class="mob-link-num">04</span> <span data-i18n="nav.process">Processus</span></span>
+      <span class="mob-link-arrow">→</span>
     </a>
-    <a href="#avis" class="mob-link" data-idx="05">
-      <span><span class="mob-link-num">05 /</span> <span data-i18n="nav.reviews">Avis</span></span>
+    <a href="#avis" class="mob-link">
+      <span><span class="mob-link-num">05</span> <span data-i18n="nav.reviews">Avis</span></span>
+      <span class="mob-link-arrow">→</span>
     </a>
-    <a href="#contact" class="mob-link" data-idx="06">
-      <span><span class="mob-link-num">06 /</span> <span data-i18n="nav.contact">Contact</span></span>
+    <a href="#contact" class="mob-link">
+      <span><span class="mob-link-num">06</span> <span data-i18n="nav.contact">Contact</span></span>
+      <span class="mob-link-arrow">→</span>
     </a>
   </div>
 
@@ -1008,7 +1124,6 @@ h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.92;font-weight:800;letter-spaci
     <div class="sec-title reveal"><span data-i18n="port.title1">Mes travaux,</span> <em data-i18n="port.title2">la preuve concrète</em></div>
     <p class="sec-sub reveal" data-i18n="port.sub">Sites web, pages de vente, pages de capture, affiches — tout ce que je suis capable de créer pour toi.</p>
 
-    <!-- NOTICE PORTFOLIO (à supprimer quand les vraies captures sont ajoutées) -->
     <div class="reveal" style="margin-top:24px;padding:14px 20px;border:1px dashed var(--accent);background:rgba(0,255,200,.03);font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--muted2);line-height:1.8;display:none;" id="portNotice">
       💡 <strong style="color:var(--accent);">Pour toi Moussa :</strong> Remplace les images de démonstration ci-dessous par de vraies captures de tes projets. Pour chaque carte, change <code>src="..."</code> dans la balise <code>&lt;img&gt;</code>. Tu peux aussi supprimer ce bloc notice une fois les captures ajoutées.
     </div>
@@ -1022,10 +1137,8 @@ h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.92;font-weight:800;letter-spaci
     </div>
 
     <div class="portfolio-grid" id="portfolioGrid">
-      <!-- Card 1 — Remplace src par une vraie capture -->
       <div class="port-card reveal" data-cat="capture" style="transition-delay:0s">
         <div class="port-img-wrap">
-          <!-- 🖼 REMPLACE src="" par le chemin de ta capture d'écran -->
           <div class="port-img-demo" style="background:linear-gradient(135deg,#0d1420 0%,#1a2540 50%,#0d1420 100%);">
             <div style="display:flex;flex-direction:column;gap:6px;padding:20px;">
               <div style="height:8px;width:60%;background:var(--accent);opacity:.7;border-radius:2px;"></div>
@@ -1043,7 +1156,6 @@ h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.92;font-weight:800;letter-spaci
           <div class="port-desc" data-i18n="port.c1.desc">Page rapide, formulaire clair, design qui inspire confiance dès la première seconde.</div>
         </div>
       </div>
-      <!-- Card 2 -->
       <div class="port-card reveal" data-cat="vente" style="transition-delay:.08s">
         <div class="port-img-wrap">
           <div class="port-img-demo" style="background:linear-gradient(135deg,#0d1420 0%,#1e1000 50%,#0d1420 100%);">
@@ -1064,7 +1176,6 @@ h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.92;font-weight:800;letter-spaci
           <div class="port-desc" data-i18n="port.c2.desc">Structure de conversion éprouvée, boutons stratégiques, résultat : 12 commandes en 7 jours.</div>
         </div>
       </div>
-      <!-- Card 3 -->
       <div class="port-card reveal" data-cat="vitrine" style="transition-delay:.16s">
         <div class="port-img-wrap">
           <div class="port-img-demo" style="background:linear-gradient(135deg,#080c12 0%,#101828 50%,#080c12 100%);">
@@ -1086,7 +1197,6 @@ h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.92;font-weight:800;letter-spaci
           <div class="port-desc" data-i18n="port.c3.desc">Image pro, compatible partout, crédibilité décuplée dès la mise en ligne.</div>
         </div>
       </div>
-      <!-- Card 4 -->
       <div class="port-card reveal" data-cat="affiche" style="transition-delay:.24s">
         <div class="port-img-wrap">
           <div class="port-img-demo" style="background:linear-gradient(135deg,#100808 0%,#1a0a0a 50%,#100808 100%);">
@@ -1105,7 +1215,6 @@ h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.92;font-weight:800;letter-spaci
           <div class="port-desc" data-i18n="port.c4.desc">Affiche pro pour réseaux sociaux ou impression — design percutant, message clair.</div>
         </div>
       </div>
-      <!-- Card 5 -->
       <div class="port-card reveal" data-cat="capture" style="transition-delay:.32s">
         <div class="port-img-wrap">
           <div class="port-img-demo" style="background:linear-gradient(135deg,#060d14 0%,#0a1820 50%,#060d14 100%);">
@@ -1126,7 +1235,6 @@ h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.92;font-weight:800;letter-spaci
           <div class="port-desc" data-i18n="port.c5.desc">15 leads récoltés en 3 jours avec un formulaire simple et un design percutant.</div>
         </div>
       </div>
-      <!-- Slot à remplir -->
       <div class="port-add reveal" style="transition-delay:.4s" onclick="window.open('https://wa.me/22607190217?text=Bonjour%20Moussa%2C%20je%20veux%20un%20site%20web.','_blank')">
         <div class="port-add-icon">＋</div>
         <span data-i18n="port.add">Ton projet ici bientôt</span>
@@ -1220,7 +1328,6 @@ h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.92;font-weight:800;letter-spaci
         <div class="sec-title reveal"><span data-i18n="contact.title1">Prêt à lancer</span><br><span data-i18n="contact.title2">ton </span><em data-i18n="contact.title3">projet ?</em></div>
         <p class="reveal" data-i18n="contact.sub">Ce que tu vends a de la valeur.<br>Ton site doit le montrer avant même que tu parles.<br><br>Contacte-moi maintenant — je réponds en moins d'une heure.</p>
 
-        <!-- FORMULAIRE INTÉGRÉ -->
         <div class="reveal" style="margin-top:32px;">
           <div style="font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--accent);letter-spacing:3px;margin-bottom:16px;">// ENVOIE-MOI UN MESSAGE</div>
           <div style="display:flex;flex-direction:column;gap:12px;" id="contactForm">
@@ -1607,4 +1714,4 @@ document.querySelectorAll('.pf-btn').forEach(btn => {
 applyLang('fr');
 </script>
 </body>
-  </html>
+</html>
