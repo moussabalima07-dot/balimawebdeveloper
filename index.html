@@ -11,7 +11,7 @@
 <meta property="og:type" content="website"/>
 <link rel="canonical" href="https://balima-dev.com/"/>
 <title>Balima Web Developer — Développeur Web Freelance Ouagadougou, Burkina Faso</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 
@@ -44,7 +44,7 @@ body.dark{
 
 html{scroll-behavior:smooth;}
 body{
-  font-family:'Syne',sans-serif;background:var(--bg);color:var(--text);
+  font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);
   overflow-x:hidden;transition:background .4s ease,color .4s ease;
 }
 
@@ -140,7 +140,7 @@ body.dark .hero-tag{border-color:rgba(0,85,255,.15);background:rgba(0,85,255,.04
 .hero-tag .dot{width:6px;height:6px;background:var(--accent);border-radius:50%;animation:blink 1.5s infinite;}
 
 /* TITRES CORRIGÉS — letter-spacing neutre pour meilleure lisibilité */
-h1{font-size:clamp(2.6rem,6vw,5.5rem);line-height:.96;font-weight:800;letter-spacing:-.5px;margin-bottom:24px;}
+h1{font-size:clamp(2.6rem,6vw,5.5rem);line-height:1.0;font-weight:800;letter-spacing:-.5px;margin-bottom:24px;}
 h1 em{font-style:normal;color:var(--accent);}
 h1 .line-gold{color:var(--gold);}
 .sec-title{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;letter-spacing:-.3px;line-height:1.1;margin-bottom:16px;}
@@ -153,17 +153,7 @@ h1 .line-gold{color:var(--gold);}
 .btn-ghost{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border:1px solid var(--border);color:var(--text);font-family:'JetBrains Mono',monospace;font-size:.82rem;letter-spacing:1px;text-decoration:none;cursor:pointer;transition:all .25s ease;clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px);}
 .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
 
-/* CODE WINDOW */
-.hero-code{position:absolute;right:40px;top:50%;transform:translateY(-50%);width:min(420px,42vw);background:var(--code-bg);border:1px solid rgba(0,255,200,.12);box-shadow:var(--glow),0 40px 80px rgba(0,0,0,.4);overflow:hidden;font-family:'JetBrains Mono',monospace;font-size:.78rem;z-index:1;}
-.code-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid rgba(0,255,200,.1);background:rgba(0,0,0,.3);}
-.code-dot{width:10px;height:10px;border-radius:50%;}
-.code-dot.r{background:#ff5f57;}.code-dot.y{background:#febc2e;}.code-dot.g{background:#28c840;}
-.code-file{margin-left:auto;color:#5a6a80;font-size:.68rem;}
-.code-body{padding:20px;line-height:1.9;color:#c9d1d9;}
-.code-ln{color:#3d4f6a;margin-right:16px;user-select:none;}
-.kw{color:#c792ea;}.fn{color:#00ffc8;}.str{color:#f0b429;}.cm{color:#5a6a80;font-style:italic;}.num{color:#f78c6c;}
-.cursor-blink{display:inline-block;width:8px;height:14px;background:#00ffc8;animation:cb .8s infinite;}
-@keyframes cb{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+/* CODE WINDOW — supprimé */
 
 /* STATS */
 .stats-bar{position:relative;z-index:1;display:flex;justify-content:center;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:rgba(0,255,200,.02);flex-wrap:wrap;}
@@ -247,7 +237,7 @@ body.dark .ba-col.good{border-top-color:rgba(0,85,255,.4);}
 /* REVIEWS */
 .reviews-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:36px;}
 .rev-card{background:var(--rev-bg);border:1px solid var(--border);padding:32px;position:relative;overflow:hidden;transition:border-color .3s ease;}
-.rev-card::before{content:'"';position:absolute;top:16px;right:24px;font-size:5rem;font-weight:800;color:rgba(0,255,200,.06);font-family:'Syne',sans-serif;line-height:1;}
+.rev-card::before{content:'"';position:absolute;top:16px;right:24px;font-size:5rem;font-weight:800;color:rgba(0,255,200,.06);font-family:'Outfit',sans-serif;line-height:1;}
 .rev-card:hover{border-color:rgba(0,255,200,.2);}
 .rev-stars{color:var(--gold);font-size:.9rem;margin-bottom:14px;letter-spacing:2px;}
 .rev-text{font-family:'JetBrains Mono',monospace;font-size:.77rem;color:var(--muted2);line-height:1.9;margin-bottom:20px;}
@@ -261,7 +251,7 @@ body.dark .ba-col.good{border-top-color:rgba(0,85,255,.4);}
 .faq-list{display:flex;flex-direction:column;gap:0;margin-top:36px;border:1px solid var(--border);}
 .faq-item{border-bottom:1px solid var(--border);}
 .faq-item:last-child{border-bottom:none;}
-.faq-q{width:100%;padding:22px 28px;background:transparent;border:none;color:var(--text);font-family:'Syne',sans-serif;font-size:.9rem;font-weight:700;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:background .2s ease;}
+.faq-q{width:100%;padding:22px 28px;background:transparent;border:none;color:var(--text);font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:700;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:background .2s ease;}
 .faq-q:hover{background:var(--faq-hover);}
 .faq-q span:last-child{width:24px;height:24px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--accent);flex-shrink:0;transition:transform .3s ease;}
 .faq-item.open .faq-q span:last-child{transform:rotate(45deg);}
@@ -353,7 +343,7 @@ footer span{color:var(--accent);}
 .art-close:hover{border-color:var(--accent);}
 
 /* RESPONSIVE */
-@media(max-width:1000px){.hero-code{display:none;}h1{font-size:clamp(2.2rem,7vw,3.8rem);}}
+@media(max-width:1000px){h1{font-size:clamp(2.2rem,7vw,3.8rem);}}
 @media(max-width:768px){
   .wrap{padding:0 20px;}
   .hero{padding:88px 20px 48px;}
@@ -450,27 +440,7 @@ footer span{color:var(--accent);}
       <a href="https://wa.me/22607190217?text=Bonjour%20Moussa%2C%20je%20veux%20un%20site%20web." class="btn-ghost" target="_blank" data-i18n="hero.cta2">💬 WhatsApp direct</a>
     </div>
   </div>
-  <div class="hero-code" aria-hidden="true">
-    <div class="code-bar">
-      <div class="code-dot r"></div><div class="code-dot y"></div><div class="code-dot g"></div>
-      <span class="code-file">balima_portfolio.js</span>
-    </div>
-    <div class="code-body">
-      <div><span class="code-ln">01</span><span class="kw">const</span> <span class="fn">developer</span> = {</div>
-      <div><span class="code-ln">02</span>&nbsp;&nbsp;name: <span class="str">"Moussa Balima"</span>,</div>
-      <div><span class="code-ln">03</span>&nbsp;&nbsp;role: <span class="str">"Web Dev Premium"</span>,</div>
-      <div><span class="code-ln">04</span>&nbsp;&nbsp;location: <span class="str">"Burkina Faso 🇧🇫"</span>,</div>
-      <div><span class="code-ln">05</span>&nbsp;&nbsp;sites_delivered: <span class="num">15</span>,</div>
-      <div><span class="code-ln">06</span>&nbsp;&nbsp;satisfaction: <span class="str">"100%"</span>,</div>
-      <div><span class="code-ln">07</span>&nbsp;&nbsp;<span class="fn">build</span>: <span class="kw">async</span> (project) => {</div>
-      <div><span class="code-ln">08</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="cm">// transform visitors into clients</span></div>
-      <div><span class="code-ln">09</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">return</span> <span class="fn">premium_result</span>(project);</div>
-      <div><span class="code-ln">10</span>&nbsp;&nbsp;}</div>
-      <div><span class="code-ln">11</span>};</div>
-      <div style="margin-top:8px;"><span class="code-ln">12</span><span class="cm">// ready to deploy your vision</span></div>
-      <div><span class="code-ln">13</span><span class="fn">developer</span>.build(<span class="str">"ton projet"</span>);<span class="cursor-blink"></span></div>
-    </div>
-  </div>
+
 </header>
 
 <!-- STATS -->
