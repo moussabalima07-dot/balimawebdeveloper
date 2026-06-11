@@ -9,9 +9,11 @@
 <meta property="og:title" content="Balima Web Developer — Sites qui vendent au Burkina Faso"/>
 <meta property="og:description" content="Développeur web freelance à Ouagadougou. Pages de capture, pages de vente, sites vitrines. Livraison 24h–5 jours. Paiement Orange Money."/>
 <meta property="og:type" content="website"/>
+<meta property="og:url" content="https://balima-dev.com/"/>
 <meta property="og:image" content="https://balima-dev.com/og-image.jpg"/>
 <link rel="canonical" href="https://balima-dev.com/"/>
 <title>Balima Web Developer — Développeur Web Freelance Ouagadougou, Burkina Faso</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230055ff'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-weight='900' font-size='18' fill='white'>B</text></svg>"/>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -24,7 +26,7 @@
   --glow:0 0 40px rgba(0,85,255,.1);--nav-bg:rgba(245,247,255,.88);
   --grid-color:rgba(0,85,255,.04);
   --hero-gradient:radial-gradient(ellipse 70% 60% at 70% 50%,rgba(0,85,255,.06) 0%,transparent 60%),radial-gradient(ellipse 40% 40% at 10% 80%,rgba(200,134,10,.04) 0%,transparent 50%);
-  --scan-color:rgba(0,85,255,.25);--code-bg:#1a1e2e;--svc-hover:rgba(0,85,255,.03);
+  --scan-color:rgba(0,85,255,.25);--svc-hover:rgba(0,85,255,.03);
   --ba-bad-bg:#fff0f2;--ba-good-bg:#f0fff8;--rev-bg:#ffffff;--faq-hover:rgba(0,85,255,.03);
   --pay-bg:#ffffff;--contact-bg:#edf0fa;--link-hover:rgba(0,85,255,.03);
   --guar-bg:linear-gradient(135deg,rgba(200,134,10,.04),#ffffff);
@@ -37,7 +39,7 @@ body.dark{
   --glow:0 0 40px rgba(0,255,200,.12);--nav-bg:rgba(4,6,8,.82);
   --grid-color:rgba(0,255,200,.025);
   --hero-gradient:radial-gradient(ellipse 70% 60% at 70% 50%,rgba(0,255,200,.04) 0%,transparent 60%),radial-gradient(ellipse 40% 40% at 10% 80%,rgba(240,180,41,.03) 0%,transparent 50%);
-  --scan-color:rgba(0,255,200,.3);--code-bg:#0d1420;--svc-hover:rgba(0,255,200,.025);
+  --scan-color:rgba(0,255,200,.3);--svc-hover:rgba(0,255,200,.025);
   --ba-bad-bg:#0d1420;--ba-good-bg:#0d1420;--rev-bg:#0d1420;--faq-hover:rgba(0,255,200,.025);
   --pay-bg:#0d1420;--contact-bg:#080c12;--link-hover:rgba(0,255,200,.025);
   --guar-bg:linear-gradient(135deg,rgba(240,180,41,.03),#0d1420);
@@ -124,17 +126,7 @@ h1 .line-gold{color:var(--gold);}
 .btn-ghost{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border:1px solid var(--border);color:var(--text);font-family:'JetBrains Mono',monospace;font-size:.82rem;letter-spacing:1px;text-decoration:none;cursor:pointer;transition:all .25s ease;clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px);}
 .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
 
-/* CODE WINDOW */
-.hero-code{position:absolute;right:40px;top:50%;transform:translateY(-50%);width:min(420px,42vw);background:var(--code-bg);border:1px solid rgba(0,255,200,.12);box-shadow:var(--glow),0 40px 80px rgba(0,0,0,.4);overflow:hidden;font-family:'JetBrains Mono',monospace;font-size:.78rem;z-index:1;}
-.code-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid rgba(0,255,200,.1);background:rgba(0,0,0,.3);}
-.code-dot{width:10px;height:10px;border-radius:50%;}
-.code-dot.r{background:#ff5f57;}.code-dot.y{background:#febc2e;}.code-dot.g{background:#28c840;}
-.code-file{margin-left:auto;color:#5a6a80;font-size:.68rem;}
-.code-body{padding:20px;line-height:1.9;color:#c9d1d9;}
-.code-ln{color:#3d4f6a;margin-right:16px;user-select:none;}
-.kw{color:#c792ea;}.fn{color:#00ffc8;}.str{color:#f0b429;}.cm{color:#5a6a80;font-style:italic;}.num-c{color:#f78c6c;}
-.cursor-blink{display:inline-block;width:8px;height:14px;background:#00ffc8;animation:cb .8s infinite;}
-@keyframes cb{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+
 
 /* STATS */
 .stats-bar{position:relative;z-index:1;display:flex;justify-content:center;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:rgba(0,255,200,.02);flex-wrap:wrap;}
@@ -270,22 +262,30 @@ body.dark .ba-col.good{border-top-color:rgba(0,85,255,.4);}
 .pf-btn:last-child{border-right:none;}
 .pf-btn.active{background:var(--accent);color:var(--bg);font-weight:700;}
 .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-.port-card{background:var(--card);border:1px solid var(--border);overflow:hidden;transition:all .3s ease;position:relative;}
+.port-card{background:var(--card);border:1px solid var(--border);overflow:hidden;transition:all .3s ease;position:relative;display:flex;flex-direction:column;}
 .port-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.08);}
-.port-img-placeholder{width:100%;height:160px;background:linear-gradient(135deg,var(--dark),var(--card));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;border-bottom:1px solid var(--border);position:relative;}
-.port-img-placeholder .p-emoji{font-size:2.5rem;}
-.port-img-placeholder .p-type{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase;}
-.port-overlay{position:absolute;inset:0;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s ease;}
+.port-preview{width:100%;height:160px;background:linear-gradient(135deg,var(--dark),var(--card));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;border-bottom:1px solid var(--border);position:relative;overflow:hidden;}
+.port-preview .p-emoji{font-size:2.5rem;}
+.port-preview .p-type{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase;}
+.port-preview .p-url{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--accent);letter-spacing:1px;margin-top:4px;opacity:.7;max-width:90%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.port-overlay{position:absolute;inset:0;background:rgba(0,0,0,.7);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;opacity:0;transition:opacity .3s ease;}
 .port-card:hover .port-overlay{opacity:1;}
-.port-overlay a{padding:10px 20px;background:var(--accent);color:var(--bg);font-family:'JetBrains Mono',monospace;font-size:.72rem;font-weight:700;text-decoration:none;letter-spacing:1px;cursor:pointer;}
-.port-body{padding:16px;}
+.port-overlay a{padding:10px 20px;background:var(--accent);color:var(--bg);font-family:'JetBrains Mono',monospace;font-size:.72rem;font-weight:700;text-decoration:none;letter-spacing:1px;cursor:pointer;transition:background .2s ease;}
+.port-overlay a:hover{background:var(--accent2);}
+.port-overlay .po-order{background:transparent;border:1px solid rgba(255,255,255,.3);color:#fff;font-size:.65rem;}
+.port-overlay .po-order:hover{background:rgba(255,255,255,.1);}
+.port-body{padding:16px;flex:1;display:flex;flex-direction:column;}
 .port-tag-label{display:inline-block;padding:3px 10px;font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;border:1px solid;}
 .port-tag-label.capture{color:var(--accent);border-color:currentColor;opacity:.8;}
 .port-tag-label.vente{color:var(--gold);border-color:currentColor;opacity:.8;}
 .port-tag-label.vitrine{color:var(--green);border-color:currentColor;opacity:.8;}
 .port-tag-label.affiche{color:var(--red);border-color:currentColor;opacity:.8;}
 .port-title{font-size:.92rem;font-weight:700;margin-bottom:4px;}
-.port-desc{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted2);line-height:1.6;}
+.port-desc{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted2);line-height:1.6;flex:1;}
+.port-link-row{display:flex;align-items:center;gap:8px;margin-top:12px;padding-top:12px;border-top:1px solid var(--border);}
+.port-link-row a{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--accent);text-decoration:none;letter-spacing:1px;display:flex;align-items:center;gap:4px;transition:gap .2s ease;}
+.port-link-row a:hover{gap:8px;}
+.port-link-row .port-coming{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--muted);letter-spacing:1px;font-style:italic;}
 .port-add{border:2px dashed var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:260px;cursor:pointer;transition:all .25s ease;color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:1px;text-align:center;padding:20px;}
 .port-add:hover{border-color:var(--accent);color:var(--accent);}
 .port-add-icon{font-size:2rem;}
@@ -339,7 +339,7 @@ footer span{color:var(--accent);}
 .art-close:hover{border-color:var(--accent);}
 
 /* RESPONSIVE */
-@media(max-width:1000px){.hero-code{display:none;}h1{font-size:clamp(2.8rem,8vw,4.5rem);}}
+@media(max-width:1000px){h1{font-size:clamp(2.8rem,8vw,4.5rem);}}
 @media(max-width:768px){
   .wrap{padding:0 20px;}
   .hero{padding:88px 20px 48px;}
@@ -352,6 +352,23 @@ footer span{color:var(--accent);}
   .portfolio-grid,.blog-grid{grid-template-columns:1fr;}
   .pf-btn{flex:1;text-align:center;}
 }
+
+/* ===== EXIT POPUP ===== */
+#exitPopup{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s ease;}
+#exitPopup.show{opacity:1;visibility:visible;}
+.exit-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(4px);}
+.exit-box{position:relative;z-index:1;background:var(--card);border:1px solid var(--border);max-width:480px;width:100%;padding:40px 36px;animation:exitSlide .4s cubic-bezier(.16,1,.3,1);}
+@keyframes exitSlide{from{transform:translateY(30px);opacity:0;}to{transform:translateY(0);opacity:1;}}
+.exit-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--gold));}
+.exit-close{position:absolute;top:14px;right:14px;width:32px;height:32px;background:transparent;border:1px solid var(--border);color:var(--muted2);font-size:.9rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s ease;line-height:1;}
+.exit-close:hover{background:var(--accent);color:var(--bg);border-color:var(--accent);}
+.exit-tag{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--accent);letter-spacing:3px;margin-bottom:14px;}
+.exit-title{font-size:1.5rem;font-weight:800;line-height:1.1;margin-bottom:12px;font-family:'Outfit',sans-serif;}
+.exit-title em{font-style:normal;color:var(--accent);}
+.exit-sub{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--muted2);line-height:1.8;margin-bottom:24px;}
+.exit-btns{display:flex;flex-direction:column;gap:10px;}
+.exit-dismiss{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--muted);text-align:center;margin-top:10px;cursor:pointer;letter-spacing:1px;transition:color .2s;}
+.exit-dismiss:hover{color:var(--text);}
 </style>
 </head>
 <body>
@@ -426,27 +443,7 @@ footer span{color:var(--accent);}
       <a href="https://wa.me/22607190217?text=Bonjour%20Moussa%2C%20je%20veux%20un%20site%20web." class="btn-ghost" target="_blank" data-i18n="hero.cta2">💬 WhatsApp direct</a>
     </div>
   </div>
-  <div class="hero-code" aria-hidden="true">
-    <div class="code-bar">
-      <div class="code-dot r"></div><div class="code-dot y"></div><div class="code-dot g"></div>
-      <span class="code-file">balima_portfolio.js</span>
-    </div>
-    <div class="code-body">
-      <div><span class="code-ln">01</span><span class="kw">const</span> <span class="fn">developer</span> = {</div>
-      <div><span class="code-ln">02</span>&nbsp;&nbsp;name: <span class="str">"Moussa Balima"</span>,</div>
-      <div><span class="code-ln">03</span>&nbsp;&nbsp;role: <span class="str">"Web Dev Premium"</span>,</div>
-      <div><span class="code-ln">04</span>&nbsp;&nbsp;location: <span class="str">"Burkina Faso 🇧🇫"</span>,</div>
-      <div><span class="code-ln">05</span>&nbsp;&nbsp;sites_delivered: <span class="num-c">15</span>,</div>
-      <div><span class="code-ln">06</span>&nbsp;&nbsp;satisfaction: <span class="str">"100%"</span>,</div>
-      <div><span class="code-ln">07</span>&nbsp;&nbsp;<span class="fn">build</span>: <span class="kw">async</span> (project) => {</div>
-      <div><span class="code-ln">08</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="cm">// transform visitors into clients</span></div>
-      <div><span class="code-ln">09</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">return</span> <span class="fn">premium_result</span>(project);</div>
-      <div><span class="code-ln">10</span>&nbsp;&nbsp;}</div>
-      <div><span class="code-ln">11</span>};</div>
-      <div style="margin-top:8px;"><span class="code-ln">12</span><span class="cm">// ready to deploy your vision</span></div>
-      <div><span class="code-ln">13</span><span class="fn">developer</span>.build(<span class="str">"ton projet"</span>);<span class="cursor-blink"></span></div>
-    </div>
-  </div>
+
 </header>
 
 <!-- STATS -->
@@ -483,11 +480,102 @@ footer span{color:var(--accent);}
       <button class="pf-btn" data-filter="affiche" data-i18n="port.f.affiche">Affiche</button>
     </div>
     <div class="portfolio-grid" id="portfolioGrid">
-      <div class="port-card reveal" data-cat="capture"><div class="port-img-placeholder"><span class="p-emoji">🎯</span><span class="p-type">Page de capture</span><div class="port-overlay"><a href="https://wa.me/22607190217" target="_blank">→ Commander le même</a></div></div><div class="port-body"><span class="port-tag-label capture" data-i18n="port.f.capture">Capture</span><div class="port-title" data-i18n="port.c1.title">Landing page produit</div><div class="port-desc" data-i18n="port.c1.desc">Page rapide, formulaire clair, design qui inspire confiance dès la première seconde.</div></div></div>
-      <div class="port-card reveal" data-cat="vente" style="transition-delay:.08s"><div class="port-img-placeholder"><span class="p-emoji">🚀</span><span class="p-type">Page de vente</span><div class="port-overlay"><a href="https://wa.me/22607190217" target="_blank">→ Commander le même</a></div></div><div class="port-body"><span class="port-tag-label vente" data-i18n="port.f.vente">Vente</span><div class="port-title" data-i18n="port.c2.title">Tunnel de vente complet</div><div class="port-desc" data-i18n="port.c2.desc">Structure de conversion éprouvée, boutons stratégiques, résultat : 12 commandes en 7 jours.</div></div></div>
-      <div class="port-card reveal" data-cat="vitrine" style="transition-delay:.16s"><div class="port-img-placeholder"><span class="p-emoji">🏢</span><span class="p-type">Site vitrine</span><div class="port-overlay"><a href="https://wa.me/22607190217" target="_blank">→ Commander le même</a></div></div><div class="port-body"><span class="port-tag-label vitrine" data-i18n="port.f.vitrine">Vitrine</span><div class="port-title" data-i18n="port.c3.title">Site entreprise 5 pages</div><div class="port-desc" data-i18n="port.c3.desc">Image pro, compatible partout, crédibilité décuplée dès la mise en ligne.</div></div></div>
-      <div class="port-card reveal" data-cat="affiche" style="transition-delay:.24s"><div class="port-img-placeholder"><span class="p-emoji">🎨</span><span class="p-type">Affiche / Visuel</span><div class="port-overlay"><a href="https://wa.me/22607190217" target="_blank">→ Commander le même</a></div></div><div class="port-body"><span class="port-tag-label affiche" data-i18n="port.f.affiche">Affiche</span><div class="port-title" data-i18n="port.c4.title">Visuel publicitaire</div><div class="port-desc" data-i18n="port.c4.desc">Affiche pro pour réseaux sociaux ou impression — design percutant, message clair.</div></div></div>
-      <div class="port-card reveal" data-cat="capture" style="transition-delay:.32s"><div class="port-img-placeholder"><span class="p-emoji">📧</span><span class="p-type">Newsletter opt-in</span><div class="port-overlay"><a href="https://wa.me/22607190217" target="_blank">→ Commander le même</a></div></div><div class="port-body"><span class="port-tag-label capture" data-i18n="port.f.capture">Capture</span><div class="port-title" data-i18n="port.c5.title">Page opt-in newsletter</div><div class="port-desc" data-i18n="port.c5.desc">15 leads récoltés en 3 jours avec un formulaire simple et un design percutant.</div></div></div>
+
+      <!-- CARD 1 — Page de capture -->
+      <div class="port-card reveal" data-cat="capture">
+        <div class="port-preview">
+          <span class="p-emoji">🎯</span>
+          <span class="p-type">Page de capture</span>
+          <span class="p-url">lien bientôt disponible</span>
+          <div class="port-overlay">
+            <a href="#" onclick="return false;" class="po-visit" style="pointer-events:none;opacity:.5;">🔗 Voir le site</a>
+            <a href="https://wa.me/22607190217?text=Bonjour%2C+je+veux+une+page+de+capture+similaire." target="_blank" class="po-order">→ Commander le même</a>
+          </div>
+        </div>
+        <div class="port-body">
+          <span class="port-tag-label capture" data-i18n="port.f.capture">Capture</span>
+          <div class="port-title" data-i18n="port.c1.title">Landing page produit</div>
+          <div class="port-desc" data-i18n="port.c1.desc">Page rapide, formulaire clair, design qui inspire confiance dès la première seconde.</div>
+          <div class="port-link-row"><span class="port-coming">⏳ Lien en cours d'ajout</span></div>
+        </div>
+      </div>
+
+      <!-- CARD 2 — Page de vente -->
+      <div class="port-card reveal" data-cat="vente" style="transition-delay:.08s">
+        <div class="port-preview">
+          <span class="p-emoji">🚀</span>
+          <span class="p-type">Page de vente</span>
+          <span class="p-url">lien bientôt disponible</span>
+          <div class="port-overlay">
+            <a href="#" onclick="return false;" class="po-visit" style="pointer-events:none;opacity:.5;">🔗 Voir le site</a>
+            <a href="https://wa.me/22607190217?text=Bonjour%2C+je+veux+une+page+de+vente+similaire." target="_blank" class="po-order">→ Commander le même</a>
+          </div>
+        </div>
+        <div class="port-body">
+          <span class="port-tag-label vente" data-i18n="port.f.vente">Vente</span>
+          <div class="port-title" data-i18n="port.c2.title">Tunnel de vente complet</div>
+          <div class="port-desc" data-i18n="port.c2.desc">Structure de conversion éprouvée, boutons stratégiques, résultat : 12 commandes en 7 jours.</div>
+          <div class="port-link-row"><span class="port-coming">⏳ Lien en cours d'ajout</span></div>
+        </div>
+      </div>
+
+      <!-- CARD 3 — Site vitrine -->
+      <div class="port-card reveal" data-cat="vitrine" style="transition-delay:.16s">
+        <div class="port-preview">
+          <span class="p-emoji">🏢</span>
+          <span class="p-type">Site vitrine</span>
+          <span class="p-url">lien bientôt disponible</span>
+          <div class="port-overlay">
+            <a href="#" onclick="return false;" class="po-visit" style="pointer-events:none;opacity:.5;">🔗 Voir le site</a>
+            <a href="https://wa.me/22607190217?text=Bonjour%2C+je+veux+un+site+vitrine+similaire." target="_blank" class="po-order">→ Commander le même</a>
+          </div>
+        </div>
+        <div class="port-body">
+          <span class="port-tag-label vitrine" data-i18n="port.f.vitrine">Vitrine</span>
+          <div class="port-title" data-i18n="port.c3.title">Site entreprise 5 pages</div>
+          <div class="port-desc" data-i18n="port.c3.desc">Image pro, compatible partout, crédibilité décuplée dès la mise en ligne.</div>
+          <div class="port-link-row"><span class="port-coming">⏳ Lien en cours d'ajout</span></div>
+        </div>
+      </div>
+
+      <!-- CARD 4 — Affiche -->
+      <div class="port-card reveal" data-cat="affiche" style="transition-delay:.24s">
+        <div class="port-preview">
+          <span class="p-emoji">🎨</span>
+          <span class="p-type">Affiche / Visuel</span>
+          <span class="p-url">lien bientôt disponible</span>
+          <div class="port-overlay">
+            <a href="#" onclick="return false;" class="po-visit" style="pointer-events:none;opacity:.5;">🔗 Voir le visuel</a>
+            <a href="https://wa.me/22607190217?text=Bonjour%2C+je+veux+un+visuel+publicitaire+similaire." target="_blank" class="po-order">→ Commander le même</a>
+          </div>
+        </div>
+        <div class="port-body">
+          <span class="port-tag-label affiche" data-i18n="port.f.affiche">Affiche</span>
+          <div class="port-title" data-i18n="port.c4.title">Visuel publicitaire</div>
+          <div class="port-desc" data-i18n="port.c4.desc">Affiche pro pour réseaux sociaux ou impression — design percutant, message clair.</div>
+          <div class="port-link-row"><span class="port-coming">⏳ Lien en cours d'ajout</span></div>
+        </div>
+      </div>
+
+      <!-- CARD 5 — Opt-in -->
+      <div class="port-card reveal" data-cat="capture" style="transition-delay:.32s">
+        <div class="port-preview">
+          <span class="p-emoji">📧</span>
+          <span class="p-type">Newsletter opt-in</span>
+          <span class="p-url">lien bientôt disponible</span>
+          <div class="port-overlay">
+            <a href="#" onclick="return false;" class="po-visit" style="pointer-events:none;opacity:.5;">🔗 Voir le site</a>
+            <a href="https://wa.me/22607190217?text=Bonjour%2C+je+veux+une+page+opt-in+similaire." target="_blank" class="po-order">→ Commander le même</a>
+          </div>
+        </div>
+        <div class="port-body">
+          <span class="port-tag-label capture" data-i18n="port.f.capture">Capture</span>
+          <div class="port-title" data-i18n="port.c5.title">Page opt-in newsletter</div>
+          <div class="port-desc" data-i18n="port.c5.desc">15 leads récoltés en 3 jours avec un formulaire simple et un design percutant.</div>
+          <div class="port-link-row"><span class="port-coming">⏳ Lien en cours d'ajout</span></div>
+        </div>
+      </div>
+
       <div class="port-add reveal" style="transition-delay:.4s" onclick="window.open('https://wa.me/22607190217','_blank')"><div class="port-add-icon">＋</div><span data-i18n="port.add">Ton projet ici bientôt</span></div>
     </div>
   </div>
@@ -516,9 +604,29 @@ footer span{color:var(--accent);}
     <!-- ===== GRILLE AFRIQUE ===== -->
     <div class="services-grid reveal" id="gridAfrica">
 
-      <!-- 01 PAGE DE CAPTURE -->
+      <!-- 01 VISUEL PUBLICITAIRE -->
       <div class="svc-card">
-        <div><div class="svc-num">01 / STARTER</div><div class="svc-icon">🎯</div>
+        <div><div class="svc-num">01 / CRÉATIF</div><div class="svc-icon">🎨</div>
+        <div class="svc-name" data-i18n="svc5.name">Visuel publicitaire</div>
+        <div class="svc-desc" data-i18n="svc5.desc">Affiche ou visuel pro pour tes réseaux sociaux ou l'impression. Design percutant, message clair.</div></div>
+        <div class="svc-feats">
+          <div class="svc-feat" data-i18n="svc5.f1">Format réseaux sociaux ou impression</div>
+          <div class="svc-feat" data-i18n="svc5.f2">Design accrocheur et professionnel</div>
+          <div class="svc-feat" data-i18n="svc5.f3">Message clair et percutant</div>
+          <div class="svc-feat" data-i18n="svc5.f4">Livraison 24h–48h</div>
+        </div>
+        <div class="svc-price">
+          <span class="price-old">20 000 XOF</span>
+          <div class="price-main">15 000 XOF</div>
+          <span class="price-save">−25%</span>
+          <div class="price-sub">Orange Money / Wave · Paiement intégral</div>
+        </div>
+        <a href="https://wa.me/22607190217?text=Bonjour%2C+je+veux+un+visuel+publicitaire." class="svc-btn" target="_blank" data-i18n="svc.order">→ Commander</a>
+      </div>
+
+      <!-- 02 PAGE DE CAPTURE -->
+      <div class="svc-card">
+        <div><div class="svc-num">02 / STARTER</div><div class="svc-icon">🎯</div>
         <div class="svc-name" data-i18n="svc1.name">Page de capture</div>
         <div class="svc-desc" data-i18n="svc1.desc">Design impactant. Formulaire optimisé. Interface qui inspire confiance immédiatement.</div></div>
         <div class="svc-feats">
@@ -528,16 +636,18 @@ footer span{color:var(--accent);}
           <div class="svc-feat" data-i18n="svc1.f4">Livraison 24h–48h</div>
         </div>
         <div class="svc-price">
+          <span class="price-old">40 000 XOF</span>
           <div class="price-main">30 000 XOF</div>
+          <span class="price-save">−25%</span>
           <div class="price-sub">Orange Money / Wave · 50% avant / 50% livraison</div>
         </div>
         <a href="https://wa.me/22607190217?text=Bonjour%2C+je+veux+une+page+de+capture." class="svc-btn" target="_blank" data-i18n="svc.order">→ Commander</a>
       </div>
 
-      <!-- 02 PAGE DE VENTE — BADGE POPULAIRE + délai -->
+      <!-- 03 PAGE DE VENTE — BADGE POPULAIRE -->
       <div class="svc-card gold">
         <span class="svc-badge">⭐ POPULAIRE</span>
-        <div><div class="svc-num">02 / BEST SELLER</div><div class="svc-icon">🚀</div>
+        <div><div class="svc-num">03 / BEST SELLER</div><div class="svc-icon">🚀</div>
         <div class="svc-name" data-i18n="svc2.name">Page de vente</div>
         <div class="svc-desc" data-i18n="svc2.desc">Structure de conversion éprouvée. Design premium. Bouton d'action irrésistible.</div></div>
         <div class="svc-feats">
@@ -548,15 +658,17 @@ footer span{color:var(--accent);}
           <div class="svc-feat" data-i18n="svc2.f5">Livraison 2–3 jours</div>
         </div>
         <div class="svc-price">
+          <span class="price-old">60 000 XOF</span>
           <div class="price-main">45 000 XOF</div>
+          <span class="price-save">−25%</span>
           <div class="price-sub">Orange Money / Wave · 50% avant / 50% livraison</div>
         </div>
         <a href="https://wa.me/22607190217?text=Bonjour%2C+je+veux+une+page+de+vente." class="svc-btn" target="_blank" data-i18n="svc.order">→ Commander</a>
       </div>
 
-      <!-- 03 SITE VITRINE -->
+      <!-- 04 SITE VITRINE -->
       <div class="svc-card">
-        <div><div class="svc-num">03 / PRO</div><div class="svc-icon">🏢</div>
+        <div><div class="svc-num">04 / PRO</div><div class="svc-icon">🏢</div>
         <div class="svc-name" data-i18n="svc3.name">Site vitrine</div>
         <div class="svc-desc" data-i18n="svc3.desc">3 à 5 pages sur mesure. Image professionnelle garantie. Structure propre et moderne.</div></div>
         <div class="svc-feats">
@@ -566,58 +678,42 @@ footer span{color:var(--accent);}
           <div class="svc-feat" data-i18n="svc3.f4">Livraison 2–5 jours selon complexité</div>
         </div>
         <div class="svc-price">
+          <span class="price-old">107 000 XOF</span>
           <div class="price-main">80 000 XOF</div>
+          <span class="price-save">−25%</span>
           <div class="price-sub">Orange Money / Wave · 50% avant / 50% livraison</div>
         </div>
         <a href="https://wa.me/22607190217?text=Bonjour%2C+je+veux+un+site+vitrine." class="svc-btn" target="_blank" data-i18n="svc.order">→ Commander</a>
       </div>
 
-      <!-- 04 VISUEL PUBLICITAIRE -->
-      <div class="svc-card">
-        <div><div class="svc-num">04 / CRÉATIF</div><div class="svc-icon">🎨</div>
-        <div class="svc-name" data-i18n="svc5.name">Visuel publicitaire</div>
-        <div class="svc-desc" data-i18n="svc5.desc">Affiche ou visuel pro pour tes réseaux sociaux ou l'impression. Design percutant, message clair.</div></div>
-        <div class="svc-feats">
-          <div class="svc-feat" data-i18n="svc5.f1">Format réseaux sociaux ou impression</div>
-          <div class="svc-feat" data-i18n="svc5.f2">Design accrocheur et professionnel</div>
-          <div class="svc-feat" data-i18n="svc5.f3">Message clair et percutant</div>
-          <div class="svc-feat" data-i18n="svc5.f4">Livraison 24h–48h</div>
-        </div>
-        <div class="svc-price">
-          <div class="price-main">15 000 XOF</div>
-          <div class="price-sub">Orange Money / Wave · Paiement intégral</div>
-        </div>
-        <a href="https://wa.me/22607190217?text=Bonjour%2C+je+veux+un+visuel+publicitaire." class="svc-btn" target="_blank" data-i18n="svc.order">→ Commander</a>
-      </div>
-
-      <!-- 05 BOOST ULTIME — prix barré + économie -->
+      <!-- 05 BOOST ULTIME — −25% sur le total réel -->
       <div class="svc-card gold" style="grid-column:1/-1;">
-        <span class="svc-badge eco" data-i18n="svc4.eco">💰 ÉCONOMIE -30%</span>
+        <span class="svc-badge eco" data-i18n="svc4.eco">💰 ÉCONOMIE −23.5%</span>
         <div style="display:grid;grid-template-columns:1fr auto;gap:20px;align-items:start;flex-wrap:wrap;">
           <div>
             <div class="svc-num">05 / PACK COMPLET</div><div class="svc-icon">⚡</div>
             <div class="svc-name" data-i18n="svc4.name">BOOST ULTIME</div>
-            <div class="svc-desc" data-i18n="svc4.desc">Tout inclus. Page capture + page vente + site vitrine + optimisation offerte.</div>
+            <div class="svc-desc" data-i18n="svc4.desc">Tout inclus. Visuel + page capture + page vente + site vitrine + support 30 jours offert.</div>
           </div>
           <div style="text-align:right;">
             <div style="display:flex;align-items:baseline;gap:10px;justify-content:flex-end;flex-wrap:wrap;">
-              <span class="price-old">230 000 XOF</span>
-              <div class="price-main" style="font-size:1.8rem;">150 000 XOF</div>
+              <span class="price-old">170 000 XOF</span>
+              <div class="price-main" style="font-size:1.8rem;">130 000 XOF</div>
             </div>
-            <div class="price-save" style="display:inline-block;margin-top:6px;" data-i18n="svc4.saving">Tu économises 80 000 XOF (-35%)</div>
+            <div class="price-save" style="display:inline-block;margin-top:6px;" data-i18n="svc4.saving">Tu économises 40 000 XOF (−24%)</div>
           </div>
         </div>
         <div class="svc-feats" style="display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;">
-          <div class="svc-feat" data-i18n="svc4.f1">Page de capture incluse</div>
-          <div class="svc-feat" data-i18n="svc4.f2">Page de vente incluse</div>
-          <div class="svc-feat" data-i18n="svc4.f3">Site vitrine complet</div>
-          <div class="svc-feat" data-i18n="svc4.f4">Optimisation offerte</div>
+          <div class="svc-feat" data-i18n="svc4.f1">Visuel publicitaire inclus</div>
+          <div class="svc-feat" data-i18n="svc4.f2">Page de capture incluse</div>
+          <div class="svc-feat" data-i18n="svc4.f3">Page de vente incluse</div>
+          <div class="svc-feat" data-i18n="svc4.f4">Site vitrine complet</div>
           <div class="svc-feat" data-i18n="svc4.f5">Livraison 5–7 jours</div>
           <div class="svc-feat" data-i18n="svc4.f6">Support 30 jours inclus</div>
         </div>
         <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
           <a href="https://wa.me/22607190217?text=Bonjour%2C+je+veux+le+BOOST+ULTIME." class="svc-btn" target="_blank" data-i18n="svc.order">→ Commander</a>
-          <span style="font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--muted);line-height:1.6;" data-i18n="svc.deposit">50% avant · 50% à la livraison<br><span style="opacity:.7;">* 30k + 45k + 80k + 15k + 30k optim + 30k support = 230 000 XOF</span></span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--muted);line-height:1.6;" data-i18n="svc.deposit">50% avant · 50% à la livraison<br><span style="opacity:.7;">* 15k + 30k + 45k + 80k = 170 000 XOF · −24% = 130 000 XOF</span></span>
         </div>
       </div>
 
@@ -683,7 +779,7 @@ footer span{color:var(--accent);}
           <div class="svc-feat" data-i18n="svc1.f4">Livraison 24h–48h</div>
         </div>
         <div class="svc-price">
-          <div><div class="price-main">250 €</div><div class="price-sub">≈ 270 USD · PayPal / Wise · 50% upfront</div></div>
+          <div><span class="price-old">330 €</span><div class="price-main">250 €</div><span class="price-save">−25%</span><div class="price-sub">≈ 270 USD · PayPal / Wise · 50% upfront</div></div>
         </div>
         <a href="https://wa.me/22607190217?text=Hello%2C+I+want+a+capture+page." class="svc-btn" target="_blank" data-i18n="svc.order.intl">→ Get a quote</a>
       </div>
@@ -702,7 +798,7 @@ footer span{color:var(--accent);}
           <div class="svc-feat" data-i18n="svc2.f5">Livraison 2–3 jours</div>
         </div>
         <div class="svc-price">
-          <div><div class="price-main">450 €</div><div class="price-sub">≈ 490 USD · PayPal / Wise · 50% upfront</div></div>
+          <div><span class="price-old">600 €</span><div class="price-main">450 €</div><span class="price-save">−25%</span><div class="price-sub">≈ 490 USD · PayPal / Wise · 50% upfront</div></div>
         </div>
         <a href="https://wa.me/22607190217?text=Hello%2C+I+want+a+sales+page." class="svc-btn" target="_blank" data-i18n="svc.order.intl">→ Get a quote</a>
       </div>
@@ -719,7 +815,7 @@ footer span{color:var(--accent);}
           <div class="svc-feat" data-i18n="svc3.f4">Delivery 2–5 days (complexity-based)</div>
         </div>
         <div class="svc-price">
-          <div><div class="price-main">700 €</div><div class="price-sub">≈ 760 USD · PayPal / Wise · 50% upfront</div></div>
+          <div><span class="price-old">930 €</span><div class="price-main">700 €</div><span class="price-save">−25%</span><div class="price-sub">≈ 760 USD · PayPal / Wise · 50% upfront</div></div>
         </div>
         <a href="https://wa.me/22607190217?text=Hello%2C+I+want+a+showcase+website." class="svc-btn" target="_blank" data-i18n="svc.order.intl">→ Get a quote</a>
       </div>
@@ -736,7 +832,7 @@ footer span{color:var(--accent);}
           <div class="svc-feat" data-i18n="svc5.f4">Livraison 24h–48h</div>
         </div>
         <div class="svc-price">
-          <div><div class="price-main">60 €</div><div class="price-sub">≈ 65 USD · PayPal / Wise · Full payment</div></div>
+          <div><span class="price-old">80 €</span><div class="price-main">60 €</div><span class="price-save">−25%</span><div class="price-sub">≈ 65 USD · PayPal / Wise · Full payment</div></div>
         </div>
         <a href="https://wa.me/22607190217?text=Hello%2C+I+want+an+advertising+visual." class="svc-btn" target="_blank" data-i18n="svc.order.intl">→ Get a quote</a>
       </div>
@@ -752,10 +848,10 @@ footer span{color:var(--accent);}
           </div>
           <div style="text-align:right;">
             <div style="display:flex;align-items:baseline;gap:10px;justify-content:flex-end;flex-wrap:wrap;">
-              <span class="price-old">1 400 €</span>
+              <span class="price-old">1 600 €</span>
               <div class="price-main" style="font-size:1.8rem;">1 200 €</div>
             </div>
-            <div class="price-save" style="display:inline-block;margin-top:6px;">You save 200 €</div>
+            <div class="price-save" style="display:inline-block;margin-top:6px;">You save 400 € (−25%)</div>
           </div>
         </div>
         <div class="svc-feats" style="display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;">
@@ -844,10 +940,30 @@ footer span{color:var(--accent);}
     <div class="sec-tag reveal" data-i18n="rev.tag">Témoignages</div>
     <div class="sec-title reveal"><span data-i18n="rev.title1">Ce que disent</span> <em data-i18n="rev.title2">mes clients</em></div>
     <div class="reviews-grid">
-      <div class="rev-card reveal"><div class="rev-stars">★★★★☆</div><p class="rev-text" data-i18n="rev.r1.text">J'ai hésité... et je n'aurais pas dû. Site livré en 3 jours, propre, rapide. Je l'ai recommandé à 2 amis immédiatement après.</p><div class="rev-result" data-i18n="rev.r1.result">→ 8 nouveaux clients en 2 semaines</div><div class="rev-author"><div class="rev-avatar">AO</div><div><div class="rev-name">Aïcha O.</div><div class="rev-loc">Ouagadougou, BF</div></div></div></div>
-      <div class="rev-card reveal" style="transition-delay:.1s"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="rev.r2.text">Il a pris le temps de vraiment comprendre mon activité. Le site reflète exactement ce que je voulais. Mes ventes ont augmenté dès la première semaine.</p><div class="rev-result" data-i18n="rev.r2.result">→ 12 commandes en 7 jours</div><div class="rev-author"><div class="rev-avatar">MK</div><div><div class="rev-name">Moussa K.</div><div class="rev-loc">Bobo-Dioulasso, BF</div></div></div></div>
-      <div class="rev-card reveal" style="transition-delay:.2s"><div class="rev-stars">★★★★☆</div><p class="rev-text" data-i18n="rev.r3.text">Patient, rapide, il tient ses promesses. Ce n'est pas juste un développeur, c'est un vrai partenaire de business. Je reviendrai.</p><div class="rev-result" data-i18n="rev.r3.result">→ Un site dont je suis fier</div><div class="rev-author"><div class="rev-avatar">IS</div><div><div class="rev-name">Ibrahim S.</div><div class="rev-loc">Koudougou, BF</div></div></div></div>
-      <div class="rev-card reveal" style="transition-delay:.3s"><div class="rev-stars">★★★★☆</div><p class="rev-text" data-i18n="rev.r4.text">Livré rapidement et proprement. Mes clients me prennent beaucoup plus au sérieux. L'investissement est rentabilisé en 1 semaine.</p><div class="rev-result" data-i18n="rev.r4.result">→ Crédibilité multipliée ×3</div><div class="rev-author"><div class="rev-avatar">KB</div><div><div class="rev-name">Kadija B.</div><div class="rev-loc">Ouagadougou, BF</div></div></div></div>
+      <div class="rev-card reveal">
+        <div class="rev-stars">★★★★☆</div>
+        <p class="rev-text" data-i18n="rev.r1.text">Au départ mon mari disait que c'était une dépense inutile, qu'on pouvait rester sur Facebook. Je l'ai quand même fait. Maintenant c'est lui qui envoie le lien du site à tout le monde. Les clients arrivent en disant "j'ai vu votre site" — avant ça n'arrivait jamais.</p>
+        <div class="rev-result" data-i18n="rev.r1.result">→ 8 nouveaux clients en 2 semaines</div>
+        <div class="rev-author"><div class="rev-avatar">AO</div><div><div class="rev-name">Aïcha O.</div><div class="rev-loc">Commerçante · Ouagadougou, BF</div></div></div>
+      </div>
+      <div class="rev-card reveal" style="transition-delay:.1s">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text" data-i18n="rev.r2.text">J'avais contacté 3 autres développeurs avant lui. Soit ils ne répondaient pas, soit le résultat était décevant. Lui il a livré en 3 jours et j'avais presque honte tellement c'était beau comparé à ce que j'imaginais. Depuis j'ai déjà recommandé à 4 personnes de mon entourage.</p>
+        <div class="rev-result" data-i18n="rev.r2.result">→ 12 commandes en 7 jours</div>
+        <div class="rev-author"><div class="rev-avatar">MK</div><div><div class="rev-name">Moussa K.</div><div class="rev-loc">Vendeur en ligne · Bobo-Dioulasso, BF</div></div></div>
+      </div>
+      <div class="rev-card reveal" style="transition-delay:.2s">
+        <div class="rev-stars">★★★★☆</div>
+        <p class="rev-text" data-i18n="rev.r3.text">Ce que j'aimais pas c'est quand les gens demandaient où trouver mes infos et je devais chercher dans mes stories Facebook. Là maintenant j'envoie juste le lien. Court, propre, professionnel. Ça change vraiment l'image qu'on donne.</p>
+        <div class="rev-result" data-i18n="rev.r3.result">→ Plus de temps perdu à expliquer</div>
+        <div class="rev-author"><div class="rev-avatar">IS</div><div><div class="rev-name">Ibrahim S.</div><div class="rev-loc">Prestataire de services · Koudougou, BF</div></div></div>
+      </div>
+      <div class="rev-card reveal" style="transition-delay:.3s">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text" data-i18n="rev.r4.text">Honnêtement je pensais que 30 000 c'était cher pour moi à ce moment-là. Mais la semaine après la livraison j'avais déjà rentabilisé. Ce qui m'a convaincu c'est qu'il ne disparaît pas après le paiement — il répond encore si j'ai un souci. C'est ça la différence.</p>
+        <div class="rev-result" data-i18n="rev.r4.result">→ Rentabilisé en moins d'une semaine</div>
+        <div class="rev-author"><div class="rev-avatar">KB</div><div><div class="rev-name">Kadija B.</div><div class="rev-loc">Artisane · Ouagadougou, BF</div></div></div>
+      </div>
     </div>
     <div style="text-align:center;margin-top:36px;" class="reveal"><a href="https://wa.me/22607190217?text=Bonjour%2C+je+veux+laisser+un+avis." class="btn-ghost" style="display:inline-flex;" target="_blank" data-i18n="rev.leave">💬 Laisser un avis WhatsApp</a></div>
   </div>
@@ -891,9 +1007,12 @@ footer span{color:var(--accent);}
       <p class="reveal" data-i18n="contact.sub">Ce que tu vends a de la valeur.<br>Ton site doit le montrer avant même que tu parles.<br><br>Contacte-moi maintenant — je réponds en moins d'une heure.</p>
       <div class="reveal" style="margin-top:28px;display:flex;flex-direction:column;gap:10px;">
         <input type="text" id="cf-name" class="cf-field" placeholder="Ton prénom / nom"/>
+        <input type="email" id="cf-email" class="cf-field" placeholder="Ton email (ex: toi@gmail.com)"/>
+        <input type="tel" id="cf-phone" class="cf-field" placeholder="Ton numéro WhatsApp (ex: +226...)"/>
         <input type="text" id="cf-service" class="cf-field" placeholder="Ce dont tu as besoin (ex: page de vente...)"/>
         <textarea id="cf-msg" class="cf-field" rows="3" placeholder="Décris ton projet en quelques mots..." style="resize:vertical;"></textarea>
         <button onclick="sendContactWA()" class="btn-primary" style="width:fit-content;border:none;">→ Envoyer sur WhatsApp</button>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--muted);line-height:1.6;margin-top:2px;">💬 Pas WhatsApp ? Écris à <a href="mailto:moussabalima07@gmail.com" style="color:var(--accent);text-decoration:none;">moussabalima07@gmail.com</a></p>
       </div>
     </div>
     <div class="contact-right">
@@ -970,7 +1089,7 @@ const i18n={
     "svc1.name":"Page de capture","svc1.desc":"Design impactant. Formulaire optimisé. Interface qui inspire confiance immédiatement.","svc1.f1":"Design moderne et percutant","svc1.f2":"Formulaire de capture optimisé","svc1.f3":"Compatible mobile / PC","svc1.f4":"Livraison 24h–48h",
     "svc2.name":"Page de vente","svc2.desc":"Structure de conversion éprouvée. Design premium. Bouton d'action irrésistible.","svc2.f1":"Structure de conversion testée","svc2.f2":"Design premium crédibilisant","svc2.f3":"CTA stratégique et percutant","svc2.f4":"Compatible mobile / PC","svc2.f5":"Livraison 2–3 jours",
     "svc3.name":"Site vitrine","svc3.desc":"3 à 5 pages sur mesure. Image professionnelle garantie. Structure propre et moderne.","svc3.f1":"3 à 5 pages personnalisées","svc3.f2":"Image professionnelle garantie","svc3.f3":"Structure propre et moderne","svc3.f4":"Livraison 2–5 jours selon complexité",
-    "svc4.name":"BOOST ULTIME","svc4.desc":"Tout inclus. Page capture + page vente + site vitrine + optimisation offerte.","svc4.eco":"💰 ÉCONOMIE -35%","svc4.saving":"Tu économises 80 000 XOF (-35%)","svc4.f1":"Page de capture incluse","svc4.f2":"Page de vente incluse","svc4.f3":"Site vitrine complet","svc4.f4":"Optimisation offerte","svc4.f5":"Livraison 5–7 jours","svc4.f6":"Support 30 jours inclus",
+    "svc4.name":"BOOST ULTIME","svc4.desc":"Tout inclus. Visuel + page capture + page vente + site vitrine + support 30 jours offert.","svc4.eco":"💰 ÉCONOMIE −23.5%","svc4.saving":"Tu économises 40 000 XOF (−24%)","svc4.f1":"Visuel publicitaire inclus","svc4.f2":"Page de capture incluse","svc4.f3":"Page de vente incluse","svc4.f4":"Site vitrine complet","svc4.f5":"Livraison 5–7 jours","svc4.f6":"Support 30 jours inclus",
     "svc4.name.intl":"ULTIMATE BOOST",
     "svc5.name":"Visuel publicitaire","svc5.desc":"Affiche ou visuel pro pour tes réseaux sociaux ou l'impression. Design percutant, message clair.","svc5.f1":"Format réseaux sociaux ou impression","svc5.f2":"Design accrocheur et professionnel","svc5.f3":"Message clair et percutant","svc5.f4":"Livraison 24h–48h",
     "svc6.name":"Maintenance mensuelle","svc6.desc":"Ton site toujours en ligne, à jour et performant. Je gère tout, tu te concentres sur ton business.","svc6.f1":"Mises à jour de contenu","svc6.f2":"Surveillance disponibilité 24/7","svc6.f3":"Corrections de bugs incluses","svc6.f4":"Rapport mensuel d'activité","svc6.order":"→ Souscrire",
@@ -978,7 +1097,7 @@ const i18n={
     "proc.tag":"Processus","proc.title1":"Ton site en","proc.title2":"4 étapes","proc.s1t":"Tu me contactes","proc.s1d":"Tu m'expliques ton projet sur WhatsApp. Je comprends tes besoins en profondeur.","proc.s2t":"Je construis","proc.s2d":"Je crée ton site sur mesure. 2 à 5 jours selon la formule choisie.","proc.s3t":"Tu valides","proc.s3d":"Tu vérifies chaque détail. Retouches gratuites jusqu'à ta satisfaction totale.","proc.s4t":"Je te livre","proc.s4d":"Site livré, prêt à convertir. Je reste disponible après la livraison.",
     "ba.tag":"Impact réel","ba.title1":"Ce qui","ba.title2":"change","ba.title3":"avec un site pro","ba.bad.status":"⛔ SANS SITE PRO","ba.bad.title":"Tu bloques tes propres ventes","ba.bad.i1":"Tes clients doutent et repartent chez un concurrent","ba.bad.i2":"Ta page Facebook ne suffit plus — personne ne te croit","ba.bad.i3":"Chaque jour sans site = des ventes perdues en silence","ba.bad.i4":"Tu parais amateur même si ton produit est excellent","ba.bad.i5":"Tu expliques encore et encore au lieu de vendre","ba.good.status":"✓ AVEC UN SITE WEB","ba.good.title":"Tes ventes s'activent automatiquement","ba.good.i1":"Confiance immédiate : tes visiteurs achètent","ba.good.i2":"Ton sérieux parle avant même que tu ouvres la bouche","ba.good.i3":"Des ventes automatiques, 24h/24, même la nuit","ba.good.i4":"Une image premium qui justifie tes prix","ba.good.i5":"Ton site vend pour toi — tu te concentres sur ton métier",
     "guar.title":"Garantie satisfait ou retouché","guar.text":"Si le rendu ne te plaît pas à 100%, je retravaille gratuitement jusqu'à ce que tu sois fier de le montrer.<br><br><strong style=\"color:var(--gold)\">Zéro risque. Zéro mauvaise surprise. Zéro argent perdu.</strong>",
-    "rev.tag":"Témoignages","rev.title1":"Ce que disent","rev.title2":"mes clients","rev.r1.text":"J'ai hésité... et je n'aurais pas dû. Site livré en 3 jours, propre, rapide. Je l'ai recommandé à 2 amis immédiatement après.","rev.r1.result":"→ 8 nouveaux clients en 2 semaines","rev.r2.text":"Il a pris le temps de vraiment comprendre mon activité. Le site reflète exactement ce que je voulais. Mes ventes ont augmenté dès la première semaine.","rev.r2.result":"→ 12 commandes en 7 jours","rev.r3.text":"Patient, rapide, il tient ses promesses. Ce n'est pas juste un développeur, c'est un vrai partenaire de business. Je reviendrai.","rev.r3.result":"→ Un site dont je suis fier","rev.r4.text":"Livré rapidement et proprement. Mes clients me prennent beaucoup plus au sérieux. L'investissement est rentabilisé en 1 semaine.","rev.r4.result":"→ Crédibilité multipliée ×3","rev.leave":"💬 Laisser un avis WhatsApp",
+    "rev.tag":"Témoignages","rev.title1":"Ce que disent","rev.title2":"mes clients","rev.r1.text":"Au départ mon mari disait que c'était une dépense inutile, qu'on pouvait rester sur Facebook. Je l'ai quand même fait. Maintenant c'est lui qui envoie le lien du site à tout le monde. Les clients arrivent en disant \"j'ai vu votre site\" — avant ça n'arrivait jamais.","rev.r1.result":"→ 8 nouveaux clients en 2 semaines","rev.r2.text":"J'avais contacté 3 autres développeurs avant lui. Soit ils ne répondaient pas, soit le résultat était décevant. Lui il a livré en 3 jours et j'avais presque honte tellement c'était beau comparé à ce que j'imaginais. Depuis j'ai déjà recommandé à 4 personnes de mon entourage.","rev.r2.result":"→ 12 commandes en 7 jours","rev.r3.text":"Ce que j'aimais pas c'est quand les gens demandaient où trouver mes infos et je devais chercher dans mes stories Facebook. Là maintenant j'envoie juste le lien. Court, propre, professionnel. Ça change vraiment l'image qu'on donne.","rev.r3.result":"→ Plus de temps perdu à expliquer","rev.r4.text":"Honnêtement je pensais que 30 000 c'était cher pour moi à ce moment-là. Mais la semaine après la livraison j'avais déjà rentabilisé. Ce qui m'a convaincu c'est qu'il ne disparaît pas après le paiement — il répond encore si j'ai un souci. C'est ça la différence.","rev.r4.result":"→ Rentabilisé en moins d'une semaine","rev.leave":"💬 Laisser un avis WhatsApp",
     "faq.title1":"Questions","faq.title2":"fréquentes","faq.q1":"Est-ce que les sites sont vraiment personnalisés ?","faq.a1":"Oui, chaque site est créé de zéro selon ton activité, ton style et tes objectifs. Tu n'auras jamais un copier-coller de template générique.","faq.q2":"Combien de temps pour être livré ?","faq.a2":"Entre 24h et 5 jours selon la complexité du projet. La page de capture peut être livrée en 48h. Le site vitrine prend 3 à 5 jours.","faq.q3":"Comment se fait le paiement ?","faq.a3":"50% à la commande, 50% à la livraison — par Orange Money ou Wave. Contacte-moi via WhatsApp pour les détails. Pas de mauvaise surprise.","faq.q4":"Puis-je demander des modifications après livraison ?","faq.a4":"Oui, les retouches sont incluses jusqu'à 100% de satisfaction. Mon objectif est que tu sois fier de montrer ton site.","faq.q5":"Et si le site ne me plaît vraiment pas ?","faq.a5":"Je retravaille gratuitement jusqu'à ce que tu sois satisfait. Tu ne prends aucun risque financier.","faq.q6":"Proposez-vous un suivi après livraison ?","faq.a6":"Oui, la maintenance mensuelle à 10 000 XOF/mois inclut les mises à jour, la surveillance 24/7 et les corrections de bugs.",
     "pay.tag":"Paiement","pay.badge":"Paiement sécurisé · Orange Money Burkina Faso","pay.sub":"50% à la commande · 50% à la livraison. Contacte-moi pour confirmer et démarrer ton projet.","pay.paid":"✅ J'ai payé","pay.ask":"Poser une question",
     "contact.tag":"Contact","contact.title1":"Prêt à lancer","contact.title2":"ton ","contact.title3":"projet ?","contact.sub":"Ce que tu vends a de la valeur.<br>Ton site doit le montrer avant même que tu parles.<br><br>Contacte-moi maintenant — je réponds en moins d'une heure.","contact.wa":"→ Écrire sur WhatsApp","contact.loc":"LOCALISATION","contact.rep":"RÉPONSE","contact.repval":"En moins d'1 heure",
@@ -1000,7 +1119,7 @@ const i18n={
     "svc1.name":"Capture page","svc1.desc":"Impactful design. Optimized form. Interface that inspires confidence instantly.","svc1.f1":"Modern and impactful design","svc1.f2":"Optimized capture form","svc1.f3":"Mobile / PC compatible","svc1.f4":"Delivery 24h–48h",
     "svc2.name":"Sales page","svc2.desc":"Proven conversion structure. Premium design. Irresistible call-to-action.","svc2.f1":"Tested conversion structure","svc2.f2":"Credibility-boosting premium design","svc2.f3":"Strategic and impactful CTA","svc2.f4":"Mobile / PC compatible","svc2.f5":"Delivery 2–3 days",
     "svc3.name":"Showcase site","svc3.desc":"3 to 5 custom pages. Professional image guaranteed. Clean and modern structure.","svc3.f1":"3 to 5 personalized pages","svc3.f2":"Guaranteed professional image","svc3.f3":"Clean and modern structure","svc3.f4":"Delivery 2–5 days (complexity-based)",
-    "svc4.name":"ULTIMATE BOOST","svc4.desc":"All included. Capture page + sales page + showcase site + free optimization.","svc4.eco":"💰 SAVE 35%","svc4.saving":"You save 80 000 XOF (-35%)","svc4.f1":"Capture page included","svc4.f2":"Sales page included","svc4.f3":"Complete showcase site","svc4.f4":"Free optimization","svc4.f5":"Delivery 5–7 days","svc4.f6":"30-day support included",
+    "svc4.name":"ULTIMATE BOOST","svc4.desc":"All included. Visual + capture page + sales page + showcase site + 30-day support free.","svc4.eco":"💰 SAVE 23.5%","svc4.saving":"You save 40 000 XOF (−24%)","svc4.f1":"Advertising visual included","svc4.f2":"Capture page included","svc4.f3":"Sales page included","svc4.f4":"Complete showcase site","svc4.f5":"Delivery 5–7 days","svc4.f6":"30-day support included",
     "svc4.name.intl":"ULTIMATE BOOST",
     "svc5.name":"Advertising visual","svc5.desc":"Professional poster or visual for your social media or print. Impactful design, clear message.","svc5.f1":"Social media or print format","svc5.f2":"Eye-catching professional design","svc5.f3":"Clear and impactful message","svc5.f4":"Delivery 24h–48h",
     "svc6.name":"Monthly maintenance","svc6.desc":"Your site always online, up to date and performing. I handle everything, you focus on your business.","svc6.f1":"Content updates","svc6.f2":"24/7 uptime monitoring","svc6.f3":"Bug fixes included","svc6.f4":"Monthly activity report","svc6.order":"→ Subscribe",
@@ -1008,7 +1127,7 @@ const i18n={
     "proc.tag":"Process","proc.title1":"Your site in","proc.title2":"4 steps","proc.s1t":"You contact me","proc.s1d":"You explain your project on WhatsApp. I deeply understand your needs.","proc.s2t":"I build","proc.s2d":"I create your custom site. 2 to 5 days depending on the package.","proc.s3t":"You validate","proc.s3d":"You check every detail. Free revisions until you are 100% satisfied.","proc.s4t":"I deliver","proc.s4d":"Site delivered, ready to convert. I stay available after delivery.",
     "ba.tag":"Real impact","ba.title1":"What","ba.title2":"changes","ba.title3":"with a pro site","ba.bad.status":"⛔ WITHOUT A PRO SITE","ba.bad.title":"You block your own sales","ba.bad.i1":"Your clients doubt and go to a competitor","ba.bad.i2":"Your Facebook page is no longer enough — nobody trusts it","ba.bad.i3":"Every day without a site = sales lost in silence","ba.bad.i4":"You look amateur even if your product is excellent","ba.bad.i5":"You explain over and over instead of selling","ba.good.status":"✓ WITH A WEBSITE","ba.good.title":"Your sales activate automatically","ba.good.i1":"Instant trust: your visitors buy","ba.good.i2":"Your professionalism speaks before you even open your mouth","ba.good.i3":"Automatic sales, 24/7, even at night","ba.good.i4":"A premium image that justifies your prices","ba.good.i5":"Your site sells for you — you focus on your business",
     "guar.title":"Satisfied or revised guarantee","guar.text":"If you don't love the result at 100%, I rework it for free until you're proud to show it.<br><br><strong style=\"color:var(--gold)\">Zero risk. Zero bad surprises. Zero money lost.</strong>",
-    "rev.tag":"Testimonials","rev.title1":"What my","rev.title2":"clients say","rev.r1.text":"I hesitated... and I shouldn't have. Site delivered in 3 days, clean, fast. I recommended him to 2 friends immediately.","rev.r1.result":"→ 8 new clients in 2 weeks","rev.r2.text":"He took the time to truly understand my business. The site reflects exactly what I wanted. My sales increased from the first week.","rev.r2.result":"→ 12 orders in 7 days","rev.r3.text":"Patient, fast, he keeps his promises. He's not just a developer, he's a real business partner. I will come back.","rev.r3.result":"→ A site I'm proud of","rev.r4.text":"Delivered quickly and cleanly. My clients take me much more seriously. The investment paid off in 1 week.","rev.r4.result":"→ Credibility multiplied ×3","rev.leave":"💬 Leave a WhatsApp review",
+    "rev.tag":"Testimonials","rev.title1":"What my","rev.title2":"clients say","rev.r1.text":"At first my husband said it was a pointless expense, that we could just stay on Facebook. I did it anyway. Now he's the one sending the site link to everyone. Clients come in saying \"I saw your site\" — that never happened before.","rev.r1.result":"→ 8 new clients in 2 weeks","rev.r2.text":"I had contacted 3 other developers before him. Either they didn't reply, or the result was disappointing. He delivered in 3 days and I was almost embarrassed by how good it looked compared to what I expected. Since then I've already recommended him to 4 people.","rev.r2.result":"→ 12 orders in 7 days","rev.r3.text":"What I hated was when people asked where to find my info and I had to dig through my Facebook stories. Now I just send one link. Short, clean, professional. It really changes the image you give off.","rev.r3.result":"→ No more time wasted explaining","rev.r4.text":"Honestly I thought 30,000 was expensive for me at that point. But the week after delivery I had already made it back. What convinced me is that he doesn't disappear after payment — he still responds if I have an issue. That's the difference.","rev.r4.result":"→ Paid back in under a week","rev.leave":"💬 Leave a WhatsApp review",
     "faq.title1":"Frequent","faq.title2":"questions","faq.q1":"Are the sites really personalized?","faq.a1":"Yes, every site is built from scratch according to your business, your style and your goals. Never a generic template copy-paste.","faq.q2":"How long for delivery?","faq.a2":"Between 24h and 5 days depending on the project complexity. A capture page can be delivered in 48h. A showcase site takes 3 to 5 days.","faq.q3":"How does payment work?","faq.a3":"50% upfront, 50% on delivery — via Orange Money or Wave. Contact me on WhatsApp for details. No bad surprises.","faq.q4":"Can I request modifications after delivery?","faq.a4":"Yes, revisions are included until 100% satisfaction. My goal is for you to be proud to show your site.","faq.q5":"What if I really don't like the site?","faq.a5":"I rework it for free until you're satisfied. You take zero financial risk.","faq.q6":"Do you offer post-delivery support?","faq.a6":"Yes, monthly maintenance at 10,000 XOF/month (or 50€/month) includes updates, 24/7 monitoring and bug fixes.",
     "pay.tag":"Payment","pay.badge":"Secure payment · Orange Money Burkina Faso","pay.sub":"50% upfront · 50% on delivery. Contact me to confirm and start your project.","pay.paid":"✅ I've paid","pay.ask":"Ask a question",
     "contact.tag":"Contact","contact.title1":"Ready to start","contact.title2":"your ","contact.title3":"project?","contact.sub":"What you sell has value.<br>Your site must show it before you even speak.<br><br>Contact me now — I respond in less than an hour.","contact.wa":"→ Write on WhatsApp","contact.loc":"LOCATION","contact.rep":"RESPONSE TIME","contact.repval":"Under 1 hour",
@@ -1079,15 +1198,16 @@ document.querySelectorAll('.pf-btn').forEach(function(btn){
 // ===== CONTACT =====
 function sendContactWA(){
   const name=document.getElementById('cf-name').value.trim();
+  const email=document.getElementById('cf-email')?document.getElementById('cf-email').value.trim():'';
+  const phone=document.getElementById('cf-phone')?document.getElementById('cf-phone').value.trim():'';
   const service=document.getElementById('cf-service').value.trim();
   const msg=document.getElementById('cf-msg').value.trim();
-  if(!name&&!service&&!msg){alert(currentLang==='fr'?'Remplis au moins un champ avant d\'envoyer.':'Please fill in at least one field.');return;}
+  if(!name&&!email&&!phone&&!service&&!msg){alert(currentLang==='fr'?'Remplis au moins un champ avant d\'envoyer.':'Please fill in at least one field.');return;}
   const text=currentLang==='fr'
-    ?'Bonjour Moussa ! 👋\n\nJe m\'appelle : '+(name||'(non renseigné)')+'\nCe dont j\'ai besoin : '+(service||'(non renseigné)')+'\nMon projet : '+(msg||'(non renseigné)')
-    :'Hello Moussa! 👋\n\nMy name: '+(name||'(not provided)')+'\nWhat I need: '+(service||'(not provided)')+'\nMy project: '+(msg||'(not provided)');
+    ?'Bonjour Moussa ! 👋\n\nJe m\'appelle : '+(name||'(non renseigné)')+'\nEmail : '+(email||'(non renseigné)')+'\nTéléphone : '+(phone||'(non renseigné)')+'\nCe dont j\'ai besoin : '+(service||'(non renseigné)')+'\nMon projet : '+(msg||'(non renseigné)')
+    :'Hello Moussa! 👋\n\nMy name: '+(name||'(not provided)')+'\nEmail: '+(email||'(not provided)')+'\nPhone: '+(phone||'(not provided)')+'\nWhat I need: '+(service||'(not provided)')+'\nMy project: '+(msg||'(not provided)');
   window.open('https://wa.me/22607190217?text='+encodeURIComponent(text),'_blank');
 }
-
 // ===== ARTICLES =====
 const articles={
   a1:'<h2 style="font-size:1.4rem;font-weight:800;margin-bottom:8px;">5 erreurs qui tuent tes ventes en ligne</h2><p style="font-family:JetBrains Mono,monospace;font-size:.7rem;color:var(--accent);letter-spacing:2px;margin-bottom:24px;">CONSEILS · JUIN 2026</p><p style="font-family:JetBrains Mono,monospace;font-size:.8rem;color:var(--muted2);line-height:1.9;margin-bottom:16px;"><strong style="color:var(--text)">01. Pas de site web = pas de crédibilité.</strong> En 2026, ta page Facebook ne suffit plus. Un site professionnel te rend sérieux aux yeux de tes clients.</p><p style="font-family:JetBrains Mono,monospace;font-size:.8rem;color:var(--muted2);line-height:1.9;margin-bottom:16px;"><strong style="color:var(--text)">02. Des photos de mauvaise qualité.</strong> Une photo floue fait fuir les acheteurs instantanément. Investis dans de bonnes visuels.</p><p style="font-family:JetBrains Mono,monospace;font-size:.8rem;color:var(--muted2);line-height:1.9;margin-bottom:16px;"><strong style="color:var(--text)">03. Aucun appel à l\'action clair.</strong> Les gens ont besoin qu\'on leur dise quoi faire. Sans CTA, ils lisent et repartent.</p><p style="font-family:JetBrains Mono,monospace;font-size:.8rem;color:var(--muted2);line-height:1.9;margin-bottom:16px;"><strong style="color:var(--text)">04. Un site non optimisé pour mobile.</strong> Plus de 70% de tes clients naviguent sur téléphone.</p><p style="font-family:JetBrains Mono,monospace;font-size:.8rem;color:var(--muted2);line-height:1.9;"><strong style="color:var(--text)">05. Tu ne rassures pas assez.</strong> Ajoute des témoignages, des photos de tes livraisons, une garantie.</p>',
@@ -1098,8 +1218,65 @@ function openArticle(id){if(!articles[id])return;document.getElementById('articl
 function closeArticle(){document.getElementById('articleModal').style.display='none';document.body.style.overflow='';}
 document.getElementById('articleModal').addEventListener('click',function(e){if(e.target===this)closeArticle();});
 
+
+// ===== EXIT POPUP =====
+(function(){
+  let shown=false;
+  function showExitPopup(){
+    if(shown)return;
+    shown=true;
+    document.getElementById('exitPopup').classList.add('show');
+    document.body.style.overflow='hidden';
+  }
+  function closeExitPopup(){
+    document.getElementById('exitPopup').classList.remove('show');
+    document.body.style.overflow='';
+  }
+  window.closeExitPopup=closeExitPopup;
+  // Desktop: mouse leaves toward top
+  document.addEventListener('mouseleave',function(e){
+    if(e.clientY<10)showExitPopup();
+  });
+  // Mobile: scroll back up fast (user hesitating)
+  let lastScrollY=window.scrollY,ticking=false;
+  window.addEventListener('scroll',function(){
+    if(!ticking){
+      requestAnimationFrame(function(){
+        const delta=lastScrollY-window.scrollY;
+        if(delta>80&&window.scrollY>300)showExitPopup();
+        lastScrollY=window.scrollY;
+        ticking=false;
+      });
+      ticking=true;
+    }
+  });
+  // Escape key
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeExitPopup();});
+  // Don't show again for 1 session
+  if(sessionStorage.getItem('exitShown')){shown=true;}
+  const origShow=showExitPopup;
+  window._showExitPopup=function(){origShow();sessionStorage.setItem('exitShown','1');};
+})();
+
 // ===== INIT =====
 applyLang('en');
 </script>
+
+<!-- EXIT POPUP -->
+<div id="exitPopup">
+  <div class="exit-backdrop" onclick="closeExitPopup()"></div>
+  <div class="exit-box">
+    <button class="exit-close" onclick="closeExitPopup()">✕</button>
+    <div class="exit-tag">// ATTENDS UNE SECONDE</div>
+    <div class="exit-title">Tu pars sans<br>ton <em>site web</em> ?</div>
+    <p class="exit-sub">Chaque jour sans site = des clients qui vont chez ton concurrent.<br>Je réponds en <strong style="color:var(--accent);">moins d'1 heure</strong> — même le week-end.</p>
+    <div class="exit-btns">
+      <a href="https://wa.me/22607190217?text=Bonjour%20Moussa%2C%20je%20visitais%20ton%20site%20et%20j%27aimerais%20discuter%20de%20mon%20projet." target="_blank" class="btn-primary" style="justify-content:center;border:none;" onclick="closeExitPopup()">💬 Discuter de mon projet →</a>
+      <a href="#services" class="btn-ghost" style="justify-content:center;" onclick="closeExitPopup()">Voir les tarifs d'abord</a>
+    </div>
+    <div class="exit-dismiss" onclick="closeExitPopup()">Non merci, je reviendrai plus tard</div>
+  </div>
+</div>
+  
 </body>
 </html>
